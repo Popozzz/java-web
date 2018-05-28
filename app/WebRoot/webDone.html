@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>管理端操作</title>
+
+<script language="javascript" src="js/zDialog.js" type="text/javascript"></script>
+<script language="javascript" src="js/zDrag.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	function add()
+	{
+		var diag = new Dialog();
+		diag.Width = 420;
+		diag.Height = 610;
+		diag.Drag=false;//不允许拖拽
+		//diag.Title = "设定了高宽和标题的普通窗口";
+		diag.URL = "add.html";
+		diag.show();
+	}
+</script>
+</head>
+<body>
+
+	<input type="button" value="添加产品" onclick="add()">
+
+</body>
+</html>

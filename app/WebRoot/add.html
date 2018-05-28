@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style1.css" />
+<script type="text/javascript" src="js/upload.js"></script>
+<script type="text/javascript" src="js/add.js"></script>
+<title>发布产品</title>
+</head>
+
+<body style="overflow:auto">
+	<div align="center">
+		<form id="form1" method="post" action="/app/web/upload" enctype="multipart/form-data">
+   	  <table class="add" >
+      <caption><h3>产品发布：</h3></caption>
+        <tr>
+        <td>产品名称：</td>
+        <td><input type="text" id="addName" name="name"/></td>
+        </tr>
+
+        <td>描述：</td>
+        <td><textarea rows="2" cols="40" style=" overflow:hidden" id="addDescription" name="description"></textarea></td>
+        </tr>
+        <tr>
+        <td>产品价格</td>
+        <td><input type="text" id="addPrice" name="price" /></td>
+        </tr>
+        <tr>
+        <td>产品库存：</td>
+        <td><input type="text" id="addStorage" name="storage"/></td>
+        </tr>
+        <tr>
+        <td>产品参数：</td>
+        <td><textarea rows="6" cols="40" style="overflow:hidden" id="addParameter" name="parameter"></textarea></td>
+        </tr>
+         <tr>
+        <td>产品类型：</td>
+		<td>
+        <select id="addType" name="type" style="height:30px; width:60px; font-size:16px">
+  		<option value ="1">手机</option>
+  		<option value ="2">电脑</option>
+  		<option value="3">平板</option>
+		</select>
+        </td>
+        </tr>
+        <tr>
+        <td>添加图片：</td>
+      	<td><div align="center">
+        	<input type="button" id="button" onclick="myfile.click();" style="width:200px; height:200px; border:0px; background:url(icon/add.png)" />
+			<input type="file" id="myfile" name="myfile" onchange="setImagePreview()" style="display:none">
+            <img id="localimg" src=""  onclick="button.click();" style="display:none;"/></div></td>
+        </tr>
+
+      </table>
+      <br/>
+	  <input type="submit" style="display:none" id="add" />
+      <td align="center"><input style="height:30px; width:50px" type="button" onclick="check(add)" value="发布"/></td>
+      <td><input style="height:30px; width:50px" type="reset" value="重置"/></td>
+</form>
+</div> 
+        
+</body>
+</html>

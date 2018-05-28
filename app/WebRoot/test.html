@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>后台管理系统</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/bar.js"></script>
+</head>
+<body>
+<div class="bar">
+    	<img src="icon/apple.png" />
+        <div class="list">   
+   <ul>   
+     <li><a href="#" onclick="showDiv('page1')">产品</a></li>   
+     <li><a href="#" onclick="showDiv('page2')">订单</a></li>   
+     <li><a href="#" onclick="showDiv('page3')">客户</a></li>   
+     <li><a href="#" onclick="showDiv('page4')">结算</a></li>   
+   </ul>  </div>
+    </div>
+    <div class="content">
+    	<div class="head">
+       		<a href="Login.html" id="exit">注销</a>
+        </div>
+        
+        <!--产品页面-->
+      <div id="page1" >
+        	<div class="search sosu">
+			<form>
+			  <input type="text" placeholder="搜索从这里开始...">
+			  <button type="submit"></button>
+			</form>
+		  </div>
+		   <input type="button" name="addproduct" value="添加" style="width:10%" class="button1"/>
+          <div>
+          	<!--<div class="product">
+            	<a href="#"><img src="img/2.jpg" alt="product1" width="184" height="223" /></a>
+            	<div class="text" >product1</div>
+            </div>
+            <div class="product">
+            	<a href="#"><img src="img/2.jpg" alt="product1" width="184" height="223" /></a>
+            	<div class="text" >product2</div>
+            </div>
+            <div class="product">
+            	<a href="#"><img src="img/2.jpg" alt="product1" width="184" height="223" /></a>
+            	<div class="text" >product3</div>
+            </div>
+            <div class="product">
+            	<a href="#"><img src="img/2.jpg" alt="product1" width="184" height="223" /></a>
+            	<div class="text" >product4</div>
+            </div>
+            <div class="product">
+            	<a href="#"><img src="img/2.jpg" alt="product1" width="184" height="223" /></a>
+            	<div class="text" >product5</div>
+            </div>-->
+          </div>
+        	
+    
+        </div>
+        
+        <!--订单-->
+        <div id="page2">
+        <table width="300">
+          <tr>
+        	<td class="tablelist" onclick="showDiv('alllist')">全部订单</td>
+            <td class="tablelist" onclick="showDiv('unpaidlist')">未付订单</td>
+            <td class="tablelist" onclick="showDiv('paidlist')">已付订单</td>
+          </tr>
+        </table>
+        
+        <div id="alllist">
+        	<table id="tableSort">  
+	          <thead >  
+		        <tr>  
+			    <th ><span class="sort_able">订单ID</span></th>  
+			    <th ><span class="sort_able">用户ID</span></th>  
+			    <th ><span class="sort_able">订单总金额</span></th>
+                <th ><span class="sort_able">订单日期</span></th> 
+                <th ><span class="sort_able">地址序号</span></th>
+                <th ><span class="sort_able">订单状态</span></th> 
+                <th><span class="sort_able">操作</span></th> 
+		       </tr>  
+	          </thead>   
+          </table> 
+           
+        </div>
+        
+        <div id="unpaidlist" >
+        	<table id="tableSort">  
+	          <thead >  
+		        <tr>  
+			    <th ><span class="sort_able">订单ID</span></th>  
+			    <th ><span class="sort_able">用户ID</span></th>  
+			    <th ><span class="sort_able">订单总金额</span></th>
+                <th ><span class="sort_able">订单日期</span></th> 
+                <th ><span class="sort_able">地址序号</span></th>
+                <th ><span class="sort_able">订单状态</span></th> 
+		       </tr>  
+	          </thead>  
+	          <tbody id="table3">  
+	            <td>2</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+               
+                
+	          </tbody>  
+          </table> 
+          </div>
+        
+        <div id="paidlist" >
+        	<table align="center" id="tableSort">  
+	          <thead >  
+		        <tr>  
+			    <th ><span class="sort_able">订单ID</span></th>  
+			    <th ><span class="sort_able">用户ID</span></th>  
+			    <th ><span class="sort_able">订单总金额</span></th>
+                <th ><span class="sort_able">订单日期</span></th> 
+                <th ><span class="sort_able">地址序号</span></th>
+                <th ><span class="sort_able">订单状态</span></th> 
+		       </tr>  
+	          </thead>  
+	          <tbody>  
+	            <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                
+                
+	          </tbody>  
+          </table>  
+        </div>
+        </div>
+        
+        
+        <!--客户-->
+        <div id="page3">
+        <div class="search sosu">
+			<form>
+			  <input type="text" placeholder="输入用户ID...">
+			  <button type="submit"></button>
+			</form>
+		  </div>
+          <div class="pad">
+          <table align="center" id="tableSort">  
+	          <thead >  
+		        <tr>  
+			    <th ><span class="sort_able">用户ID</span></th>  
+			    <th ><span class="sort_able">用户密码</span></th>  
+			    <th ><span class="sort_able">用户手机号码</span></th>
+                <th ><span class="sort_able">用户邮箱</span></th> 
+                <th ><span class="sort_able">地址数量</span></th>
+		       </tr>  
+	          </thead>  
+	          <tbody>  
+	            <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>       
+	          </tbody>  
+          </table>
+          </div>  
+        </div>
+        
+        
+        <!--结算-->
+        <div id="page4">
+        <table width="250">
+          <tr>
+        	<td class="tablelist" onclick="showDiv('shopmount')">销售量</td>
+            <td class="tablelist" onclick="showDiv('money')">金额</td>
+          </tr>
+        </table>
+        
+        <div id="shopmount" >
+        <form name="reg_testdate" style="width:600px">
+	    <select name="YYYY" onChange="YYYY" class="date">
+	    	<option value="">请选择 年</option>
+	   </select>
+	   <select name="MM" onChange="MM" class="date">
+		  <option value="">选择 月</option>
+	  </select>
+      <input name="submit" type="submit" value="确定" style="width:100px;font-size: 20px;"  />
+      </form>
+      <table align="center" id="tableSort">  
+	          <thead >  
+		        <tr>  
+			    <th ><span class="sort_able">产品ID</span></th>  
+			    <th ><span class="sort_able">用户密码</span></th>  
+			    <th ><span class="sort_able">用户手机号码</span></th>
+                <th ><span class="sort_able">用户邮箱</span></th> 
+                <th ><span class="sort_able">总销量</span></th>
+		       </tr>  
+	          </thead>  
+	          <tbody>  
+	            <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>       
+	          </tbody>  
+          </table>
+        </div>
+        
+        <div id="money" >
+        <form name="reg_testdate1" style="width:600px">
+	    <select name="YYYY1" onChange="YYYY1" class="date">
+	    	<option value="">请选择 年</option>
+	   </select>
+	   <select name="MM1" onChange="MM1" class="date">
+		  <option value="">选择 月</option>
+	  </select>
+      <input name="submit1" type="submit" value="确定" style="width:100px;font-size: 20px;"  />
+      </form>
+      <table align="center" id="tableSort">  
+	          <thead >  
+		        <tr>  
+			    <th ><span class="sort_able">用户ID</span></th>  
+			    <th ><span class="sort_able">用户密码</span></th>  
+			    <th ><span class="sort_able">用户手机号码</span></th>
+                <th ><span class="sort_able">用户邮箱</span></th> 
+                <th ><span class="sort_able">总金额</span></th>
+		       </tr>  
+	          </thead>  
+	          <tbody>  
+	            <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>       
+	          </tbody>  
+          </table>
+         
+        </div>
+        </div>
+    </div>
+</body>
+</html>

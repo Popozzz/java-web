@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+
+id="WebApp_ID" version="2.5">
+  <display-name>app</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:applicationContext.xml</param-value>
+  </context-param>
+  
+
+  <servlet>
+	<servlet-name>LoginServlet</servlet-name>
+	<servlet-class>servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>LoginServlet</servlet-name>
+	<url-pattern>/android/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>RegisterServlet</servlet-name>
+	<servlet-class>servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>RegisterServlet</servlet-name>
+	<url-pattern>/android/register</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>UploadServlet</servlet-name>
+	<servlet-class>servlet.UploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>UploadServlet</servlet-name>
+	<url-pattern>/web/upload</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>GetAllProductServlet</servlet-name>
+	<servlet-class>servlet.GetAllProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>GetAllProductServlet</servlet-name>
+	<url-pattern>/android/getAllProduct</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>SearchProductServlet</servlet-name>
+	<servlet-class>servlet.SearchProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>SearchProductServlet</servlet-name>
+	<url-pattern>/android/searchProduct</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>GetTypeProductServlet</servlet-name>
+	<servlet-class>servlet.GetTypeProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>GetTypeProductServlet</servlet-name>
+	<url-pattern>/android/getTypeProduct</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>GetOneProductServlet</servlet-name>
+	<servlet-class>servlet.GetOneProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>GetOneProductServlet</servlet-name>
+	<url-pattern>/android/getOneProduct</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>GetAllAddressServlet</servlet-name>
+	<servlet-class>servlet.GetAllAddressServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>GetAllAddressServlet</servlet-name>
+	<url-pattern>/android/getAllAddress</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>GetOneAddressServlet</servlet-name>
+	<servlet-class>servlet.GetOneAddressServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>GetOneAddressServlet</servlet-name>
+	<url-pattern>/android/getOneAddress</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>ChangeAddressServlet</servlet-name>
+	<servlet-class>servlet.ChangeAddressServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>ChangeAddressServlet</servlet-name>
+	<url-pattern>/android/changeAddress</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>AddAddressServlet</servlet-name>
+	<servlet-class>servlet.AddAddressServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>AddAddressServlet</servlet-name>
+	<url-pattern>/android/addAddress</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>DeleteAddressServlet</servlet-name>
+	<servlet-class>servlet.DeleteAddressServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>DeleteAddressServlet</servlet-name>
+	<url-pattern>/android/deleteAddress</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>GetShoppingCartServlet</servlet-name>
+	<servlet-class>servlet.GetShoppingCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>GetShoppingCartServlet</servlet-name>
+	<url-pattern>/android/getShoppingCart</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>AddProductToCartServlet</servlet-name>
+	<servlet-class>servlet.AddProductToCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>AddProductToCartServlet</servlet-name>
+	<url-pattern>/android/addProductToCart</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>DeleteProductToCartServlet</servlet-name>
+	<servlet-class>servlet.DeleteProductToCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>DeleteProductToCartServlet</servlet-name>
+	<url-pattern>/android/deleteProductToCart</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>AddOrderDirectlyServlet</servlet-name>
+	<servlet-class>servlet.AddOrderDirectlyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>AddOrderDirectlyServlet</servlet-name>
+	<url-pattern>/android/addOrderDirectly</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>AddOrderServlet</servlet-name>
+	<servlet-class>servlet.AddOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>AddOrderServlet</servlet-name>
+	<url-pattern>/android/addOrder</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>ForeOrderServlet</servlet-name>
+	<servlet-class>servlet.ForeOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>ForeOrderServlet</servlet-name>
+	<url-pattern>/android/foreOrder</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>UpdateOrderStateServlet</servlet-name>
+	<servlet-class>servlet.UpdateOrderStateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>UpdateOrderStateServlet</servlet-name>
+	<url-pattern>/android/updateOrderState</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>DeleteOrderServlet</servlet-name>
+	<servlet-class>servlet.DeleteOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>DeleteOrderServlet</servlet-name>
+	<url-pattern>/android/deleteOrder</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>GetAllOrderServlet</servlet-name>
+	<servlet-class>servlet.GetAllOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>GetAllOrderServlet</servlet-name>
+	<url-pattern>/android/getAllOrder</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+	<servlet-name>GetTypeOrderServlet</servlet-name>
+	<servlet-class>servlet.GetTypeOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>GetTypeOrderServlet</servlet-name>
+	<url-pattern>/android/getTypeOrder</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <!-- DWR的配置 -->
+  <servlet>
+	<servlet-name>dwr</servlet-name><!-- 指定DWR核心Servlet的名字 -->
+	<servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class><!-- 指定DWR核心Servlet的实现类 -->
+
+	<init-param><!--  指定DWR核心Servlet处于调试状态 -->
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+	</init-param>
+	</servlet>
+
+	
+	<servlet-mapping><!-- 指定核心Servlet的URL映射 -->
+		<servlet-name>dwr</servlet-name>
+		<url-pattern>/dwr/*</url-pattern><!-- 指定核心Servlet映射的URL -->
+	</servlet-mapping>
+  
+  <!-- —————————————————————————————————————————————————————————————————————————————————————————— -->
+  
+  
+</web-app>

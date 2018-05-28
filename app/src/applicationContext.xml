@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+	
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/oracle">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value="mysql910069169"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+
+				<value>org/etspace/abc/vo/Address.hbm.xml</value>
+				<value>org/etspace/abc/vo/Customer.hbm.xml</value>
+				<value>org/etspace/abc/vo/OrderDetails.hbm.xml</value>
+				<value>org/etspace/abc/vo/OrderProduct.hbm.xml</value>
+				<value>org/etspace/abc/vo/Product.hbm.xml</value>
+				<value>org/etspace/abc/vo/Shoppingcart.hbm.xml</value>
+				<value>org/etspace/abc/vo/Admin.hbm.xml</value>
+				<value>org/etspace/abc/vo/OrderView.hbm.xml</value>
+				<value>org/etspace/abc/vo/SumView.hbm.xml</value></list>
+		</property></bean>
+		
+		<bean id="dbManager" class="db.DBManager">
+		</bean>
+		
+		<bean id="userDao" class="dao.UserDao">
+		</bean>
+		
+		<bean id="userService" class="service.UserService">
+			<property name="userDao">
+				<ref bean="userDao"></ref>
+			</property>
+		</bean>
+		
+		<bean id="productDao" class="dao.ProductDao">
+		</bean>
+		
+		<bean id="productService" class="service.ProductService">
+			<property name="productDao">
+				<ref bean="productDao"></ref>
+			</property>
+		</bean>
+		
+		<bean id="adminDao" class="dao.AdminDao">
+		</bean>
+		
+		<bean id="adminService" class="service.AdminService">
+			<property name="adminDao">
+				<ref bean="adminDao"></ref>
+			</property>
+		</bean>
+		
+		<bean id="addressDao" class="dao.AddressDao">
+		</bean>
+		
+		<bean id="addressService" class="service.AddressService">
+			<property name="addressDao">
+				<ref bean="addressDao"></ref>
+			</property>
+		</bean>
+		
+		<bean id="orderDetailDao" class="dao.OrderDetailDao">
+		</bean>	
+		
+		<bean id="orderProductDao" class="dao.OrderProductDao">
+		</bean>
+		
+		<bean id="orderDao" class="dao.OrderDao">
+		</bean>
+		
+		<bean id="orderService" class="service.OrderService">
+			<property name="orderDetailDao">
+				<ref bean="orderDetailDao"></ref>
+			</property>
+			<property name="orderDao">
+				<ref bean="orderDao"></ref>
+			</property>
+		</bean>
+		
+		<bean id="shoppingCartDao" class="dao.ShoppingCartDao">
+		</bean>
+		
+		<bean id="shoppingCartService" class="service.ShoppingCartService">
+			<property name="shoppingCartDao">
+				<ref bean="shoppingCartDao"></ref>
+			</property>
+		</bean>
+		
+		
+		
+		
+		</beans>

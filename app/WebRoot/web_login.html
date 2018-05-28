@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>管理员登陆</title>
+<link rel="stylesheet" type="text/css" href="css/login.css" />
+<script type="text/javascript" src="js/verify.js"></script>
+<script type="text/javascript" src="dwr/engine.js"></script>
+<script type="text/javascript" src="dwr/util.js"></script>
+<script type="text/javascript" src="dwr/interface/AjaxAdminDao.js"></script>
+
+</head>
+<body>
+<div class="head">
+		<img src="icon/apple.png" />
+	</div>
+	<form class="admin_page" method="post" >
+      <dl class="admin_login" >
+            <dt>
+                <strong>后台管理系统登录</strong>
+                <em>Management System</em>
+            </dt>
+            <dd class="user_icon">
+                <input type="text" placeholder="账号" name="account" class="login_txtbx"/>
+            </dd>
+            <dd class="pwd_icon">
+                <input type="password" placeholder="密码" name="password" class="login_txtbx"/>
+            </dd>
+        <!--<dd class="val_icon" onload="createCode()">
+          <div class="checkcode">
+                    <input type="text" id="J_codetext" placeholder="验证码" maxlength="4" class="login_txtbx" >
+                </div>
+          <div class="checkimg">
+                </div>   
+          </dd>-->
+          <dd>
+                <input type="button" value="立即登陆" class="submit_btn" onclick="check()"/>
+          </dd>
+        </dl>
+  	</form>
+</body>
+</html>

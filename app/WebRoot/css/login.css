@@ -1,0 +1,138 @@
+/* CSS Document */
+
+body{
+	height:100%;
+	overflow:hidden;
+}
+body,input,button,div { 
+	padding: 0; 
+	margin: 0;
+}
+.head {
+	width:auto;
+	height:70px;
+}
+.head img {
+	margin:5px auto auto 160px;
+}
+.admin_page{
+	background-image:url(../img/1.jpg);
+	height:700px;
+	width:auto;
+	padding:5%;
+}
+.admin_login{
+	width:250px;
+	height:auto;
+	overflow:hidden;
+	background:rgba(255,255,255,0.6);
+	margin:7% 7% 0 auto;
+	padding:35px;
+	border-radius:5px;
+	}
+.admin_login dt{
+	font-size:20px;
+	font-weight:bold;
+	text-align:center;
+	color:#333;
+	margin-bottom:15px;
+}
+.admin_login dt strong{
+	display:block;
+}
+.admin_login dt em{
+	display:block;
+	font-size:12px;
+	margin-top:8px;
+}
+.admin_login dd{
+	margin:5px 0;
+	height:42px;
+	overflow:hidden;
+	position:relative;
+}
+.admin_login dd .login_txtbx{
+	font-size:14px;
+	height:26px;
+	line-height:26px;
+	padding:8px 5%;
+	width:90%;
+	text-indent:2em;
+	border:none;
+	background:rgba(51,51,51,0.2);
+	color:#CCC;
+}
+.admin_login dd .login_txtbx:-webkit-input-placeholder,-moz-placeholder,-moz-placeholder {
+	color:#CCC;
+	line-height:inherit;
+	}
+.admin_login dd .login_txtbx:focus{
+	background:rgba(0,0,0,0.4);
+}
+.admin_login dd:before{
+	position:absolute;
+	top:0;
+	left:10px;
+	height:42px;
+	line-height:42px;
+	font-size:20px;
+	color:#CCC;
+}
+.admin_login dd.user_icon:before{
+	content:url(../icon/user.png);
+}
+.admin_login dd.pwd_icon:before{
+	content:url(../icon/password.png);
+}
+.admin_login dd.val_icon:before{
+	content:url(../icon/vaild.png);
+}
+/*
+.admin_login dd .ver_btn{
+	text-align:right;
+	border:none;
+	color:rgba(0,0,0,0.4);
+	height:42px;
+	line-height:42px;
+	margin:0;
+	z-index:1;
+	position:relative;
+	float:right;
+	background:#CCC;
+}
+*/
+.admin_login dd .checkcode{
+	float:left;
+	width:140px;
+	height:42px;
+	background:rgba(51,51,51,0.2);
+}
+.admin_login dd.checkcode input{
+	width:140px;
+	height:36px;
+	line-height:36px;
+	padding:3px;
+	color:white;
+	outline:none;
+	border:none;
+	text-indent:2.8em;
+}
+.admin_login dd .checkimg {
+	width:100px;
+	height:42px;
+	background:rgba(0,0,0,0.5);
+	float:right;
+}
+.admin_login dd .submit_btn{
+	width:100%;
+	height:42px;
+	border:none;
+	font-size:16px;
+	background:#333;
+	color:#f8f8f8;
+}
+.admin_login dd .submit_btn:hover{
+	background:#666;
+	color:#f4f4f4;
+}
+	

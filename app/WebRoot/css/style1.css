@@ -1,0 +1,34 @@
+/* CSS Document */
+
+body{
+	height:100%;
+	overflow:hidden;
+	}
+body,input,button { 
+	padding: 0; 
+	margin: 0;
+	}
+.add input{
+	border:none;
+}
+.add {
+	background: rgb(102,102,102);
+	}
+.add td{
+	background:#FFF;
+	padding-top:10px;
+	padding-left:10px;
+	line-height:30px;}
+.btn-default{
+	background-color:transparent ;  
+	  }
+#submit,#reset{
+	background-color:transparent ;
+	}
+.textfield
+{
+	background:none;
+	border:0px;
+	resize:none;
+	font-size:14px;
+	}

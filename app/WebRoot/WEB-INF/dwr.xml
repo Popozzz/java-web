@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC
+     "-//GetAhead Limited//DTD Direct Web Remoting 1.0//EN"
+     "http://www.getahead.ltd.uk/dwr/dwr10.dtd"
+>
+<!--<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://getahead.org/dwr/dwr20.dtd">-->
+<dwr>
+
+	<allow>
+		<create creator="spring" javascript="AjaxAdminDao">
+			<param name="beanName" value="adminDao"/>
+			<include method="existAdmin"/>
+		</create>
+		<convert match="java.lang.StackTraceElement" converter="bean"></convert>
+		<convert match="java.lang.Exception" converter="exception"></convert>
+		
+
+		<create creator="spring" javascript="AjaxUserDao">
+		        <param name="beanName" value="userDao"/>
+		        <include method="getAllUser"/>
+		        <include method="getUser"/>
+		</create>
+		<convert match="org.etspace.abc.vo.Customer" converter="bean">     
+		<param name="include" value="customerId,customerPassword,customerPhone,customerSum" />   
+		 </convert>
+		 
+		  <create creator="spring" javascript="AjaxOrderDetailDao">
+		        <param name="beanName" value="orderDetailDao"/>
+		        <include method="getAllOrderDetails"/>
+		        <include method="getAllTypeOrderDetails"/>
+		        <include method="getCustomerOrderDetails"/>
+		        <include method="changeOrderDetails"/>
+		</create>
+		<convert match="org.etspace.abc.vo.OrderDetails" converter="bean">     
+		<param name="include" value="orderId,customerId,orderTotalAmount,orderDate,orderState,addressId" />   
+		 </convert>
+		 
+		 <create creator="spring" javascript="AjaxOrderDao">
+		        <param name="beanName" value="orderDao"/>
+		        <include method="getSettleAccounts"/>
+		</create>
+		<convert match="org.etspace.abc.vo.SumViewId" converter="bean">     
+		<param name="include" value="productId,productName,productPrice,productNumber,productTotalAmount" />   
+		 </convert>
+		
+
+		<create creator="spring" javascript="AjaxProductDao">
+			<param name="beanName" value="productDao"/>
+			<include method="getAllProduct"/>
+			<include method="changeProduct"/>
+			<include method="findKeyProduct"/>
+			<include method="getProduct" />
+			<include method="deleteProduct" />
+		</create>
+		<convert match="org.etspace.abc.vo.Product" converter="bean">
+			<param name="include" value="productId,productName,productImg,productDate,productSell,productPrice,productDescription,productStorage,productParameter,productType" />
+		</convert>
+
+		<create creator="spring" javascript="AjaxAddressDao">
+			<param name="beanName" value="addressDao"/>
+			<include method="getAllAddress"/>
+		</create>
+		 <convert match="org.etspace.abc.vo.Address" converter="hibernate3">
+			<param name="include" value="id,customerName,customerAddress,customerPhone" />
+			
+		</convert>
+		
+		<convert match="org.etspace.abc.vo.Addressld" converter="hibernate3">
+			<param name="include" value="customer,addressId" />		
+		</convert>
+		
+	</allow>
+</dwr>
